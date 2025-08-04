@@ -8,9 +8,14 @@ import cors from "cors";
 
 const app = express();
 
+
+
 app.use(cors({
-    origin: "http://localhost:5173",  // frontend origin (removed trailing slash)
-    credentials: true,                // if you're using cookies
+  origin: [
+    "http://localhost:5173",
+    "https://taskly-nine-beta.vercel.app"
+  ],
+  credentials: true
 }));
 
 app.use(express.json());

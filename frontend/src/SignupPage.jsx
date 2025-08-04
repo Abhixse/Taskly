@@ -20,7 +20,7 @@ function Signup() {
         setIsLoading(true);
 
         try {
-            await axios.post('http://localhost:8000/api/v1/signup', { name, email, password });
+            await axios.post('https://taskly-backend-3c7f.onrender.com/api/v1/signup', { name, email, password });
 
             toast.success('Registration successful! Redirecting to login...', {
                 position: 'top-right',

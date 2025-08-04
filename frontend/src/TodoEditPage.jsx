@@ -21,7 +21,7 @@ function TodoEditPage() {
           return;
         }
 
-        const { data } = await axios.get(`http://localhost:8000/api/v1/todo/${id}`, {
+        const { data } = await axios.get(`https://taskly-backend-3c7f.onrender.com/api/v1/todo/${id}`, {
           headers: {
             Authorization: `Bearer ${token}`,
             'Content-Type': 'application/json'
@@ -69,7 +69,7 @@ function TodoEditPage() {
       }
 
       await axios.put(
-        `http://localhost:8000/api/v1/todo/${id}`,
+        `https://taskly-backend-3c7f.onrender.com/api/v1/todo/${id}`,
         { title, description },
         {
           headers: {

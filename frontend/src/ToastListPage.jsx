@@ -16,7 +16,7 @@ function TodoListPage() {
     }
 
     try {
-      const { data } = await axios.get('http://localhost:8000/api/v1/todo', {
+      const { data } = await axios.get('https://taskly-backend-3c7f.onrender.com/api/v1/todo', {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -52,7 +52,7 @@ function TodoListPage() {
     }
 
     try {
-      await axios.delete(`http://localhost:8000/api/v1/todo/${id}`, {
+      await axios.delete(`https://taskly-backend-3c7f.onrender.com/api/v1/todo/${id}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -84,7 +84,7 @@ function TodoListPage() {
       const currentTodo = todos.find(todo => todo._id === id);
 
       await axios.put(
-        `http://localhost:8000/api/v1/todo/${id}`,
+        `https://taskly-backend-3c7f.onrender.com/api/v1/todo/${id}`,
         {
           title: currentTodo.title,
           description: currentTodo.description,
